@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    // 1rem is equal to 10px
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2.7rem;
+    line-height: 1;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 2.2rem;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 1700px) {
+        max-width: 1850px;
+    }
+}
+
+.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}  
+
+.cover {
+    object-fit: cover;
+    max-width: none;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+// Colors
+.gray {
+    color: gray;
+}
+
+header {
+    @media (min-width: 1700px) {}
+    nav {
+        background: black;
+        justify-content: center;
+        
+        ul {
+            display: flex;
+            width: 100%;
+            margin: 0;
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-right: 1px solid #bbb;
+                color: white;
+                list-style-type: none;
+                width: 100%;
+                font-size: 1.5rem;
+                &:last-child {
+                    border-right: 0;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+                .img1 {
+                    height: 60%;
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+.welcome {
+    margin-bottom: 1rem; // 10px
+    padding-top: 30px;
+    .contain {
+        display: flex;
+        justify-content: space-between;
+        @media (min-width: 1700px) {
+            max-width: 1850px;
+        }
+        #h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            line-height: 1;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.news {
+    margin-bottom: 5rem;
+    .contain {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .card-left {
+            position: relative;
+            width: 100%;
+            margin-bottom: 1rem;
+            @media (min-width: 1024px) {
+                width: 49.5%;
+                margin-bottom: 0;
+            }
+            .copy {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                max-width: 80rem;
+                height: 100%;
+                padding: 10rem 2.5% 2rem 2.5%;
+                color: white;
+                @media (min-width: 1024px) {
+                    padding: 0 2.5% 2rem 2.5%;
+                }
+                .heading {
+                    padding-bottom: 1.5rem;
+                }
+                .text {
+                    margin-bottom: 1.5rem;
+                    font-size: large;
+                    p {
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        .cards-right {
+            width: 100%;
+            @media (min-width: 1024px) {
+                width: 49%;
+            }
+            .cards-contain {
+                display: flex;
+                flex-direction: column;
+                @media (min-width: 1024px) {
+                    // width: 49%;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                .card {
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    @media (min-width: 1024px) {
+                        width: 49.5%;
+                    }
+                    &:nth-child(3), &:nth-child(4) {
+                        margin-bottom: 1rem;
+                        @media (min-width: 1024px) {
+                            margin-bottom: 0;
+                        }
+                    }
+                    .copy {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        padding: 20rem 5% 1rem;
+                        color: white;
+                        @media (min-width: 1024px) {
+                            padding: 10rem 5% 1rem;
+                        }
+                        .heading {
+                            margin-bottom: 1rem;
+                            max-width: 37.8rem;
+                        }
+                        p {
+                            color: white;
+                            font-size: 2rem;
+                            bottom: 0;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.articles {
+    .heading {
+        padding-bottom: 2rem;
+    }
+    .articles-contain { // this is the parent div
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .article { // this is the child div
+            margin-bottom: 5rem;
+            @media (min-width: 1024px) {
+                width: 33%;
+            }
+            img {
+                height: 43rem;
+            }
+            .copy {
+                padding-top: 2rem;
+                max-width: 70rem;
+                @media (min-width: 1024px) {
+                    max-width: 50rem;;
+                }
+                p {
+                    &.red-bar{
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.red-bar {
+    border-left: 4px solid red;
+    padding-left: 5px;
+}
+
+.blue-bar {
+    border-left: 4px solid blue;
+    padding-left: 5px;
+}
+
+  /*# sourceMappingURL=style.css.map */
